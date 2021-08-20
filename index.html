@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="outside-part">
+		<div class="inside-part">
+			<div class="logo">	
+				<img src="img1.png">
+			</div>
+			<div class="input-details">
+				<form>
+					<h1 id="h1">Sign Up</h1>
+					<span id="same1">Name</span>	
+					<input id="same2" type="text" name="name">
+					<span >Email</span>
+					<input type="text" name="email">
+					<span>Password</span>
+					<input type="text" name="password">
+					<span id="same3">Confirm Password</span>
+					<input id="same4" type="text" name="password"><br>
+					<button class="signup-btn" onclick='login(event)' id="signup-btn" >Sign Up</button><br>
+				</form>
+				<div class="connect-line" ><div class="cl"></div><p>or connect with<p><div></div></div>
+				<div class="social-fontawesome" id="sc">
+					<i class="fa fa-windows"></i><i class="fa fa-facebook"></i><i class="fa fa-google"></i><i class="fa fa-linkedin" ></i>
+				</div>
+				<div class="login-txt">
+					<p id="account">Already have an Account ?</p>
+					<p class="blue" id="blue" onclick='login(event)' >Login</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+	var h12=document.getElementById("h1");
+	var h13=document.getElementById("blue");
+	var h14=document.getElementById("signup-btn");
+	var same1=document.getElementById("same1");
+	var same2=document.getElementById("same2");
+	var same3=document.getElementById("same3");
+	var same4=document.getElementById("same4");
+	var account=document.getElementById("account");
+	var signbtn=document.getElementById("signup-btn");
+	var sc=document.getElementById('sc');
+	function login(e){
+		e.preventDefault();
+		if(h12.innerText==="Sign Up"){
+			
+		h12.innerHTML="Login";
+		h13.innerHTML="Sign Up";
+		h14.innerHTML="Login";
+		account.innerHTML="Don't have an account?";
+		h12.style.marginBottom="109px";
+		same1.style.display="none";
+		same2.style.display="none";
+		same3.style.display="none";
+		sc.style.margin="50px auto";
+
+		same4.style.display="none";	
+		}
+		else if(h12.innerText==="Login" ){
+		h12.style.marginBottom="17px";
+		h12.innerHTML="Sign Up";
+		h13.innerHTML="Login";
+
+		h14.innerHTML="Sign Up";
+		account.innerHTML="Already have an Account ?";
+		same1.style.display="block";
+		same2.style.display="block";
+		same3.style.display="block";
+		same4.style.display="block";
+		sc.style.margin="23px auto";
+
+		}
+	}
+
+	
+
+
+
+</script>
+</body>
+
+</html>
